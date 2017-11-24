@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/resources">
+        <file>iframe.html</file>
+        <file>index.html</file>
+        <file>redirect.html</file>
+        <file>script.js</file>
+        <file>style.css</file>
+        <file>user_script.js</file>
+    </qresource>
+</RCC>

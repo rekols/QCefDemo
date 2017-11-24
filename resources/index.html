@@ -1,0 +1,112 @@
+<!doctype html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>Hello, CEF</title>
+    <link href="https://tower.im/favicon.ico" rel="icon"/>
+    <link href="qrc://resources/style.css" type="text/css" rel="stylesheet"/>
+    <link href="https://cr.deepin.io/gerrit_ui/gwt/chrome/7CF1DE6EF2AABFEFAE4D469A16D60071.cache.css"
+          type="text/css" rel="stylesheet"/>
+</head>
+
+<body>
+
+<div>
+    <h2>Channel test</h2>
+    <div>
+        <p>Send message to channel object</p>
+        <input type="text" id="msg"/>
+        <input type="submit" id="send" value="Send to Server"/>
+    </div>
+    <div>
+        <input type="button" onclick="channelCount()" value="Print Count">
+    </div>
+
+    <div>
+        <input type="button" onclick="execSql()" value="DB Query">
+    </div>
+</div>
+
+<iframe src="qrc://resources/iframe.html">
+    <p>Your browser does not support iframe!</p>
+</iframe>
+
+<div>
+    <h2>Tooltip position</h2>
+    <a href="http://z.cn" title="Amazon CN">Amazon China</a>
+</div>
+
+<div>
+    <h2>Cross Domain</h2>
+    <input type="button" onclick="testCrossDomain()" value="Send xhr">
+</div>
+
+<div>
+    <h2>Dialog test</h2>
+    <div>
+        <input type="button" onclick="alert('Alert!');" value="Alter dialog"/>
+        <input type="button" onclick="onConfirmButtonClicked();"
+               value="Confirm dialog"/>
+        <input type="button" onclick="onPromptButtonClicked();"
+               value="Prompt dialog"/>
+    </div>
+</div>
+
+<div>
+    <input type="file" name="fileUpload" value="fileUpload" id="fileUpload" accept="image/*">
+</div>
+
+<div>
+    <h2>Download Handler</h2>
+    <a href="https://codeload.github.com/LiuLang/qcef/zip/master">qcef.zip</a>
+</div>
+
+<div>
+    <h2>PDF files</h2>
+    <a href="http://www.gnu.org/software/gnu-c-manual/gnu-c-manual.pdf">The GNU
+        C Reference Manual</a>
+</div>
+
+<div>
+    <h2>Web Notification</h2>
+    <input type="button" id="requestNotification"
+           onclick="onNotificationButtonClicked()"
+           value="Show Notification"/>
+</div>
+
+<div>
+    <h2>onBeforeBrowse() test</h2>
+    <a href="https://bing.com" target="_self">Bing.com</a>
+</div>
+
+<div>
+    <h2>Javascript close window</h2>
+    <input type="button" onclick="closeWindow()" value="Close Window">
+</div>
+
+<div>
+    <h2>Javascript popup window</h2>
+    <input type="button" onclick="popupWindow()" value="Popup Window">
+</div>
+
+<div>
+    <h2>Check redirect</h2>
+    <input type="button" onclick="redirectPage(event)" value="Redirect Page">
+</div>
+
+<div>
+    <h2>Dispatch Event</h2>
+    <div>
+        <button onclick="selectImageFiles()">Change Avatar</button>
+    </div>
+    <input type="file" accept="image/*" class="avatar-file" name="avatar-file">
+</div>
+
+<div>
+    <h2>LocalStorage</h2>
+    <span class="local-storage-label">0</span>
+    <button onclick="updateButtonClickCount()">Update</button>
+</div>
+
+<script src="qrc://resources/script.js"></script>
+
+</body>
