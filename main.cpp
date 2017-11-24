@@ -1,9 +1,11 @@
 #include "mainwindow.h"
-#include <QApplication>
+#include <DApplication>
 #include <QDesktopWidget>
 #include <QDir>
 #include <qcef_context.h>
 #include <qcef_util.h>
+
+DWIDGET_USE_NAMESPACE
 
 const char kPlatformThemeName[] = "QT_QPA_PLATFORMTHEME";
 const char kGtk2Theme[] = "gtk2";
@@ -49,11 +51,15 @@ int main(int argc, char *argv[])
       return exit_code;
     }
 
-    QApplication a(argc, argv);
+    DApplication::loadDXcbPlugin();
+    DApplication a(argc, argv);
+    a.setTheme("light");
+
     MainWindow w;
-    w.resize(600, 400);
+    w.setMinimumSize(600, 400);
     w.show();
-    w.move((QApplication::desktop()->width() - w.width()) / 2, (QApplication::desktop()->height() - w.height()) / 2);
+    w.move((QApplication::desktop()->width() - w.width()) / 2,
+           (QApplication::desktop()->height() - w.height()) / 2);
 
     QCefBindApp(&a);
 
