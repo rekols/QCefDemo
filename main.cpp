@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include <QApplication>
+#include <QDesktopWidget>
 #include <QDir>
 #include <qcef_context.h>
 #include <qcef_util.h>
@@ -52,6 +53,7 @@ int main(int argc, char *argv[])
     MainWindow w;
     w.resize(600, 400);
     w.show();
+    w.move((QApplication::desktop()->width() - w.width()) / 2, (QApplication::desktop()->height() - w.height()) / 2);
 
     QCefBindApp(&a);
 
