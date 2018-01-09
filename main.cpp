@@ -1,7 +1,6 @@
 #include "mainwindow.h"
 #include <DApplication>
 #include <QDesktopWidget>
-#include <QDir>
 #include <qcef_context.h>
 #include <qcef_util.h>
 
