@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
     a.setTheme("light");
 
     MainWindow w;
-    w.setMinimumSize(600, 400);
+    w.setMinimumSize(800, 600);
     w.show();
     w.move((QApplication::desktop()->width() - w.width()) / 2,
            (QApplication::desktop()->height() - w.height()) / 2);

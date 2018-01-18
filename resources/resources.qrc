@@ -1,7 +1,6 @@
 <RCC>
     <qresource prefix="/resources">
         <file>index.html</file>
-        <file>redirect.html</file>
         <file>style.css</file>
     </qresource>
 </RCC>
